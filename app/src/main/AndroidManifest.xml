@@ -12,6 +12,9 @@
         <activity android:name=".LoginPage"></activity>
         <activity android:name=".SignupPage"></activity>
         <activity android:name=".HomePage"></activity>
+        <activity android:name=".predictions"></activity>
+        <activity android:name=".opinion"></activity>
+        <activity android:name=".Profile"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

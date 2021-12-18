@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    android:background="@drawable/mathias_p_r_reding_ygugmmv8vb8_unsplash">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:background="@color/black"
+        android:alpha="0.8"
+        android:layout_height="675dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/nitrogen"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <EditText
+                android:id="@+id/phosphorous"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/Potassium"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <EditText
+                android:id="@+id/Temperature"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="32dp"
+                android:text="Nitrogen Content"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:text="Temperature"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nitrogen" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:text="Phosphorous Content"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phosphorous" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="4dp"
+                android:text="Potassium Content"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Potassium" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:text="Humidity"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Temperature" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="4dp"
+                android:text="pH"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:text="Rainfall"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal2"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal3"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/predict_button"
+        android:layout_width="330dp"
+        android:layout_height="44dp"
+        android:text="Predict"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
