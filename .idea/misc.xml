@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/drawable/edit_text_border.xml" value="0.1890625" />
+        <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/drawable/ic_launcher_foregroun.xml" value="0.1890625" />
+        <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1890625" />
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/drawable/profile_bg.xml" value="0.2703125" />
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/drawable/start_button_bg.xml" value="0.2703125" />
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/drawable/start_page_button1.xml" value="0.2109375" />
@@ -19,7 +21,9 @@
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/layout/opinion_card_list.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/layout/predictions.xml" value="0.2" />
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/layout/profile.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/layout/profile_list.xml" value="0.19479166666666667" />
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/layout/signup_page.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2109375" />
         <entry key="..\:/Users/Prashanth Jaganathan/AndroidStudioProjects/farmeazy2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2109375" />
       </map>
     </option>

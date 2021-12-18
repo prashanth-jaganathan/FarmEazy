@@ -27,7 +27,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String value = adapter.getItem(i);
-                System.out.println(value);
+                //System.out.println(value);
                 if(value.equals("Predict Crop")) {
                     Intent intent = new Intent(HomePage.this, predictions.class);
                     startActivity(intent);
