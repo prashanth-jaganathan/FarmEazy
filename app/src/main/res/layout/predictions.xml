@@ -7,38 +7,42 @@
     android:background="@drawable/mathias_p_r_reding_ygugmmv8vb8_unsplash">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="336dp"
-        android:layout_height="675dp"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
         android:alpha="0.8"
         android:background="@color/black"
         app:cardCornerRadius="20dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Nitrogen Content"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/nitrogen"
                 android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:hint="0"
-                android:inputType="numberDecimal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.298"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <EditText
-                android:id="@+id/phosphorous"
-                android:layout_width="250dp"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
@@ -47,11 +51,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <EditText
-                android:id="@+id/Potassium"
+            <TextView
+                android:id="@+id/textView6"
                 android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                    android:text="Phosphorous Content"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nitrogen" />
+
+
+            <EditText
+                android:id="@+id/phosphorous"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
@@ -60,11 +79,54 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-            <EditText
-                android:id="@+id/Temperature"
+            <TextView
+                android:id="@+id/textView7"
                 android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="Potassium Content"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phosphorous" />
+
+            <EditText
+                android:id="@+id/potassium"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="Temperature"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/potassium" />
+
+            <EditText
+                android:id="@+id/temperature"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
@@ -73,93 +135,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="16dp"
-                android:text="Nitrogen Content"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="8dp"
-                android:text="Temperature"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.298"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nitrogen" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="12dp"
-                android:text="Phosphorous Content"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.298"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phosphorous" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="4dp"
-                android:text="Potassium Content"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.298"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Potassium" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
                 android:text="Humidity"
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.298"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Temperature" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="4dp"
-                android:text="pH"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.298"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:text="Rainfall"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.298"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
+                app:layout_constraintTop_toBottomOf="@+id/temperature" />
 
             <EditText
-                android:id="@+id/editTextNumberDecimal"
+                android:id="@+id/humidity"
                 android:layout_width="250dp"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
@@ -168,11 +163,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <EditText
-                android:id="@+id/editTextNumberDecimal2"
+
+            <TextView
+                android:id="@+id/textView8"
                 android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="pH"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+
+            <EditText
+                android:id="@+id/ph"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
@@ -181,11 +192,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-            <EditText
-                android:id="@+id/editTextNumberDecimal3"
+
+            <TextView
+                android:id="@+id/textView9"
                 android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="Rainfall"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ph" />
+
+            <EditText
+                android:id="@+id/rainfall"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
@@ -194,7 +220,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -202,14 +227,22 @@
 
     <Button
         android:id="@+id/predict_button"
-        android:layout_width="330dp"
-        android:layout_height="44dp"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/poppins_regular"
+        android:onClick="onclick_predict"
+        android:padding="5dp"
         android:text="Predict"
-        android:textAllCaps="false"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
