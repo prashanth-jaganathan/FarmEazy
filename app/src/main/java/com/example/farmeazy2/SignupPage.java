@@ -2,16 +2,24 @@ package com.example.farmeazy2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SignupPage extends AppCompatActivity {
+    FirebaseAuth mAuth;
     EditText email, password, confirmPassword, city, state;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,6 +33,7 @@ public class SignupPage extends AppCompatActivity {
         confirmPassword = findViewById(R.id.signup_confirm_password);
         city = findViewById(R.id.signup_city);
         state = findViewById(R.id.signup_state);
+        mAuth = FirebaseAuth.getInstance();
     }
     public void clickSignup(View v){
         openHomeActivity();
@@ -40,42 +49,60 @@ public class SignupPage extends AppCompatActivity {
         String ccity = city.getText().toString();
         String cstate = state.getText().toString();
 
-        if(semail.equals("")) {
-            Toast.makeText(getApplicationContext(), "Enter Email", Toast.LENGTH_LONG).show();
+        if(TextUtils.isEmpty(semail)){
+            email.setError("Email cannot be empty");
+            email.requestFocus();
         }
-        else if(spass.equals("")) {
-            Toast.makeText(getApplicationContext(), "Enter Password", Toast.LENGTH_LONG).show();
+        else if(TextUtils.isEmpty(spass)){
+            password.setError("Enter Password");
+            password.requestFocus();
         }
-        else if(scpass.equals("")) {
-            Toast.makeText(getApplicationContext(), "Enter Password", Toast.LENGTH_LONG).show();
+        else if(TextUtils.isEmpty(scpass)){
+            confirmPassword.setError("Re-type Password");
+            confirmPassword.requestFocus();
         }
-        else if(ccity.equals("")) {
-            Toast.makeText(getApplicationContext(), "Enter City", Toast.LENGTH_LONG).show();
+        else if(TextUtils.isEmpty(ccity)){
+            city.setError("Enter City");
+            city.requestFocus();
         }
-        else if(cstate.equals("")) {
-            Toast.makeText(getApplicationContext(), "Enter State", Toast.LENGTH_LONG).show();
+        else if(TextUtils.isEmpty(cstate)){
+            state.setError("Enter State");
+            state.requestFocus();
         }
         else if(!semail.endsWith("@gmail.com") || semail.length()<=10){
-            Toast.makeText(getApplicationContext(), "Invalid Email Address", Toast.LENGTH_LONG).show();
+            email.setError("Invalid Email ID");
+            email.requestFocus();
         }
         else if(spass.length()<6){
-            Toast.makeText(getApplicationContext(), "Password should be atleast 6 characters", Toast.LENGTH_SHORT).show();
+            password.setError("Password should be atleast 6 characters long");
+            password.requestFocus();
         }
         else if(!scpass.equals(spass)){
-            Toast.makeText(getApplicationContext(), "Passwords don't match", Toast.LENGTH_LONG).show();
-        }
-        else if(ccity.equals("")){
-            Toast.makeText(getApplicationContext(), "Enter City", Toast.LENGTH_SHORT).show();
-        }
-        else if(cstate.equals("")){
-            Toast.makeText(getApplicationContext(), "Enter State", Toast.LENGTH_SHORT).show();
+            confirmPassword.setError("Passwords don't match");
+            password.hasFocus();
+            confirmPassword.requestFocus();
         }
         else{
-
-            Intent intent = new Intent(this, HomePage.class);
-            startActivity(intent);
-            Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
+            createUser();
         }
+    }
+    public void createUser(){
+        String user_email = email.getText().toString();
+        String user_password = password.getText().toString();
+
+        mAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SignupPage.this, HomePage.class);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
     public void openLoginActivity(){
         Intent intent = new Intent(this, LoginPage.class);

@@ -7,9 +7,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/profile_tiles"
-        android:textSize="25dp"
-        android:fontFamily="@font/poppins_regular"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppins_medium"
         android:padding="10dp"
+        android:textColor="@color/black"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

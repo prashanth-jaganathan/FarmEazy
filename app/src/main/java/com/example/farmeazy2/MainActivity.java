@@ -8,8 +8,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+public class MainActivity extends AppCompatActivity {
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+        mAuth = FirebaseAuth.getInstance();
 
     }
+
+
     public void clickLogin(View v){
         openLoginActivity();
     }
@@ -26,8 +32,15 @@ public class MainActivity extends AppCompatActivity {
         openSignupActivity();
     }
     public void openLoginActivity(){
-        Intent intent = new Intent(this, LoginPage.class);
-        startActivity(intent);
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user == null) {
+            Intent intent = new Intent(this, LoginPage.class);
+            startActivity(intent);
+        }
+        else {
+            Intent intent = new Intent(this, HomePage.class);
+            startActivity(intent);
+        }
     }
     public void openSignupActivity(){
         Intent intent = new Intent(this, SignupPage.class);
